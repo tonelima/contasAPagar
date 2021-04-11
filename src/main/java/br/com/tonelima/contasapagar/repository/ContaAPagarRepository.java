@@ -16,5 +16,5 @@ public interface ContaAPagarRepository extends JpaRepository<ContaAPagar, Long> 
 	
 	public List<ContaAPagar> findByTipo(String tipo);
 	
-	public List<ContaAPagar> findByVencimentoBetween(Date vencimento);
+	public List<ContaAPagar> findByVencimentoBetween(Date dataInicial, Date dataFinal);
 }

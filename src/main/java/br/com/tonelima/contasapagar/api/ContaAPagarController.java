@@ -24,7 +24,7 @@ public class ContaAPagarController {
 
 	@GetMapping
 	@ResponseBody
-	public ResponseEntity<List<ContaAPagar>> find(@RequestParam String tipo) {
+	public ResponseEntity<List<ContaAPagar>> find(@RequestParam(required = false) String tipo) {
 		return ResponseEntity.ok(contaAPagarService.findByTipo(tipo));
 	}
 }
