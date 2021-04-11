@@ -1,20 +1,17 @@
 package br.com.tonelima.contasapagar.repository;
 
+import br.com.tonelima.contasapagar.model.ContaAPagar;
+import org.springframework.data.jpa.repository.JpaRepository;
+
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-import br.com.tonelima.contasapagar.model.ContaAPagar;
-
-@Repository
 public interface ContaAPagarRepository extends JpaRepository<ContaAPagar, Long> {
 
-	public Optional<ContaAPagar> findById(Long id);
+	 Optional<ContaAPagar> findById(Long id);
 	
-	public List<ContaAPagar> findByTipo(String tipo);
+	 List<ContaAPagar> findByTipo(String tipo);
 	
-	public List<ContaAPagar> findByVencimentoBetween(Date vencimento);
+	 //List<ContaAPagar> findByVencimentoBetween(Date vencimento);
 }
